@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>预习教练 · 学习方法构建体系 第 7 讲</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="预习">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand" data-nav="home" title="回首页"><span class="dot"></span>预习教练</div>
+    <div class="spacer"></div>
+    <div class="navlinks" id="nav"></div>
+  </div>
+</div>
+
+<main class="app">
+  <div id="view"></div>
+  <div class="small faint" style="margin-top:18px;line-height:1.8">
+    双击本文件即可使用，不需要联网、不需要安装。所有记录只存在这台电脑的浏览器里，换电脑或清浏览器数据前请到「数据」页导出备份。<br>
+    方法来自《学习方法构建体系》第 7 讲（预习）；课程与学分来自你的 2024 版培养方案；任务单内容按国内主流权威教材整理。
+  </div>
+</main>
+
+<noscript><div class="app"><div class="card">这个页面需要 JavaScript。请用 Chrome 或 Edge 打开。</div></div></noscript>
+
+<script src="assets/courses.js"></script>
+<script src="assets/term.js"></script>
+<script src="assets/timetable.js"></script>
+<script src="assets/bridge.js"></script>
+<script src="assets/tracks.js"></script>
+<script src="assets/store.js"></script>
+<script src="assets/tasks.js"></script>
+<script src="assets/review.js"></script>
+<script src="assets/coach.js"></script>
+<script src="assets/reader.js"></script>
+<script src="assets/flow.js"></script>
+<script src="assets/app.js"></script>
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  navigator.serviceWorker.register('./sw.js').catch(function () {});
+}
+</script>
+</body>
+</html>
