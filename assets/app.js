@@ -344,7 +344,9 @@
 
     h.push('<div class="card"><div class="card-head"><h2>云同步</h2><span class="sub">手机和电脑填同一个同步码</span></div>');
     if (location.protocol === 'file:') {
-      h.push('<div class="note warn">现在是从本地文件打开的，没有云端接口。发布到 Netlify 后（手机扫码那个网址），这里就能用。</div>');
+      h.push('<div class="note warn">现在是从本地文件打开的，没有云端接口。用手机版网址打开时才有。</div>');
+    } else if (location.hostname.indexOf('github.io') >= 0) {
+      h.push('<div class="note warn">当前是 GitHub Pages 部署，<b>不支持云同步</b>（它只能放静态文件）。手机和电脑之间请用下面的「导出备份 / 导入备份」搬运数据；要云同步就得另外发布到 Netlify。</div>');
     }
     h.push('<label class="fld"><span class="lbl">同步码（6–32 位字母数字，自己定，别太好猜）</span><input type="text" id="sync-code" value="' + esc(S.getSyncCode()) + '" placeholder="例：yuxi-2026"></label>');
     h.push('<div class="btn-row"><button class="btn primary" data-act="sync-save">保存同步码</button>' +
